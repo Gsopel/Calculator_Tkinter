@@ -16,20 +16,20 @@ class MyCalculator():
         self.entry_variable += number
         self.display_number.delete(0, "end")
         self.display_number.insert(0, self.entry_variable)
-        print(self.entry_variable)
+        #print(self.entry_variable)
 
     def btn_math(self, oper):
         if self.display_number.get() != '':
             self.calc_val = float(self.display_number.get())
             self.display_number.delete(0, "end")
             self.operator = oper
-            print(self.calc_val)
+            #print(self.calc_val)
         else:
             raise self.display_number.insert(0, "Error")
 
     def btn_math_equal(self):
         if self.operator != '':
-            print(self.calc_val, self.operator, float(self.display_number.get()))
+            #print(self.calc_val, self.operator, float(self.display_number.get()))
             if self.operator == '+':
                 self.solution = self.calc_val + float(self.display_number.get())
             if self.operator == '-':
@@ -54,7 +54,7 @@ class MyCalculator():
         if oper == '√':
             self.calc_val = float(self.display_number.get())
             self.solution = sqrt(self.calc_val)
-            print(self.calc_val)
+            #print(self.calc_val)
         displays = str(self.calc_val) + oper
         self.display_math.insert(0, displays)
         self.display_number.delete(0, "end")
